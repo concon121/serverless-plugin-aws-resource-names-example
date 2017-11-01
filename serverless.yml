@@ -1,0 +1,12 @@
+service: spec
+provider:
+  name: aws
+  runtime: python3.6
+functions:
+  hello:
+    handler: handler.hello
+plugins:
+  - serverless-aws-resource-names
+custom:
+  serverless-aws-resource-names:
+    source: mapping.json
